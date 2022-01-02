@@ -18,10 +18,20 @@ class ProductController
         require __DIR__ . '/../views/products/index.php';
     }
 
-    public function single()
+    //API SECTION
+    public function adminindex()
     {
-        //$model = $this->productService->detail();
-
-        require __DIR__ . '/../views/article/single.php';
+        require __DIR__ . '/../views/admin/products/index.php';
     }
+
+    public function create()
+    {
+        require __DIR__ . '/../views/admin/products/create.php';
+    }
+
+    public function edit()
+    {
+        require __DIR__ . '/../views/admin/products/edit.php';
+    }
+
 }

@@ -1,15 +1,44 @@
-.customitem {
-    height: 33.3333vh;
+.item1 {
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1639140004/Screenshot_2021-12-10_133950_oiwt5v.png);
+    height: 33.3333vh;
     background-size:cover;
     background-position: center; /* Center the image */
 }
 
-.customitem:hover {
+.item1:hover {
     background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1639140004/Screenshot_2021-12-10_133950_oiwt5v.png);
     background-size:cover;
     background-position: center; /* Center the image */
 }
+
+.item2 {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1641076294/geforce-1650_evga-3qtr-front_left-100794190-orig_thk2fs.jpg);
+    height: 33.3333vh;
+    background-size:cover;
+    background-position: center; /* Center the image */
+}
+
+.item2:hover {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1641076294/geforce-1650_evga-3qtr-front_left-100794190-orig_thk2fs.jpg);
+    background-size:cover;
+    background-position: center; /* Center the image */
+}
+
+
+.item3 {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1641077313/TUjcfTWZ4ENJmJp2R8bhVH_wsepef.jpg);
+    height: 33.3333vh;
+    background-size:cover;
+    background-position: center; /* Center the image */
+}
+
+.item3:hover {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/dg5wrkfe7/image/upload/v1641077313/TUjcfTWZ4ENJmJp2R8bhVH_wsepef.jpg);
+    background-size:cover;
+    background-position: center; /* Center the image */
+}
+
+
 
 .customitem .navp {
     color: white;

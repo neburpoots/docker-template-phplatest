@@ -11,6 +11,9 @@ spl_autoload_register(function($className) {
 		case stristr($className, 'Service'):
 			$file = __DIR__ . '/' . 'services' . '/' . $className . '.php';
 			break;
+		case stristr($className, 'Product'):
+			$file = __DIR__ . '/' . 'models' . '/' . $className . '.php';
+			break;
 		default: 
 			$file = __DIR__ . '\\' . $className . '.php';
 	}

@@ -21,7 +21,7 @@ class ApiRouter {
         $resource = $parts[2];
         $id = $parts[3] ?? null;
 
-        if($resource != "tasks") {
+        if($resource != "products") {
             //header("{$_SERVER['SERVER_PROTOCOL']} 404 Not Found");
             http_response_code(404);
             exit;
@@ -31,7 +31,7 @@ class ApiRouter {
         
         header("Content-type: application/json; charset=UTF-8");
 
-        $controller = new TaskController;
+        $controller = new ProductController();
 
         $controller->processRequest($_SERVER['REQUEST_METHOD'], $id);
     }

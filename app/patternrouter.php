@@ -4,8 +4,6 @@ if(!isset($_SESSION))
     session_start();     
 }
 
-require 'autoload.php';
-
 class PatternRouter {
 
     private function stripParameters($uri) {
@@ -32,6 +30,9 @@ class PatternRouter {
             die();
         }
         
+        //AUTOLOAD AFTER API
+        require 'autoload.php';
+
         //Clears the user session
         if($explodedUri[0] == "logout") {
             unset($_SESSION["user"]);
@@ -61,6 +62,56 @@ class PatternRouter {
                 die();
             }
         }
+
+        if($explodedUri[0] == "allproducts") {
+            if(isset($_SESSION["user"])) {
+                $user = unserialize($_SESSION["user"]);
+                $role = $user->getRole();
+                if ($role->getId() == 2 || $role->getName() == "Admin") {
+                    $productController = new ProductController();
+                    $productController->adminindex();
+                }
+                die();
+            } else {
+                header('Location: /login');
+                die();
+            }
+        }
+
+        if($explodedUri[0] == "createproduct") {
+            if(isset($_SESSION["user"])) {
+                $user = unserialize($_SESSION["user"]);
+                $role = $user->getRole();
+                if ($role->getId() == 2 || $role->getName() == "Admin") {
+                    $productController = new ProductController();
+                    $productController->create();
+                }
+                die();
+            } else {
+                header('Location: /login');
+                die();
+            }
+        }
+
+        
+        if($explodedUri[0] == "productedit") {
+            if(isset($_SESSION["user"])) {
+                $user = unserialize($_SESSION["user"]);
+                $role = $user->getRole();
+                if ($role->getId() == 2 || $role->getName() == "Admin") {
+                    if(is_numeric($explodedUri[1])) {
+                        $productController = new ProductController();
+                        $productController->edit();
+                    }
+                    die();
+                }
+                die();
+            } else {
+                header('Location: /login');
+                die();
+            }
+        }
+
 
         //FOR THE USERS
         if($explodedUri[0] == "login") {

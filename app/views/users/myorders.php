@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
+  <title>Mijn bestellingen</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -51,7 +51,7 @@
                                 <div class="row "><h4><? echo $order_line->getProduct()->getName(); ?></h4></div>
                             </div>
                             <div class="col-2">
-                                <div class="row "><h4>Amount: <? echo $order_line->getQuantity(); ?></h4></div>
+                                <div class="row "><h4>Aantal: <? echo $order_line->getQuantity(); ?></h4></div>
                             </div>
                             <div class="col-2">
                                 <h4>&euro; <? echo $order_line->getProduct()->getPrice() * $order_line->getQuantity() ?> </h4>

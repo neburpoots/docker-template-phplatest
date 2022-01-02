@@ -21,9 +21,15 @@
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="/login">
         <div class="customitem item3">
-          <b><p class="navp">Login/Register</p></b>
+          <?php      
+              if (isset($_SESSION['user'])) {
+                echo "<b><p class='navp'>My account</p></b>";
+              } else {
+                echo "<b><p class='navp'>Login/Register</p></b>";
+              }
+          ?>
         </div>
       </a>
     </li>
