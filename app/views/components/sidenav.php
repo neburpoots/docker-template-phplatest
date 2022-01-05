@@ -23,15 +23,15 @@
                 ?>
                 <?php if ($role->getId() == 2 || $role->getName() == "Admin") : ?>
 
-                    <a href="#" class="nav_link active">
+                    <!-- <a href="#" class="nav_link active">
                         <i class='bx bx-user nav_icon'></i>
                         <span class="nav_name">Gebruikers</span>
-                    </a>
+                    </a> -->
                     <a href="/allproducts" class="nav_link active">
                         <i class='bx bx-shopping-bag nav_icon'></i>
                         <span class="nav_name">Producten</span>
                     </a>
-                    <a href="#" class="nav_link active">
+                    <a href="/allorders" class="nav_link active">
                         <i class='bx bx-basket nav_icon'></i>
                         <span class="nav_name">Alle bestellingen</span>
                     </a>

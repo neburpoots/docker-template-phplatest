@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mijn account</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dg5wrkfe7/image/upload/v1639140004/Screenshot_2021-12-10_133950_oiwt5v.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
@@ -20,12 +21,12 @@
     include __DIR__ . '/../components/header.php';
   ?>
   <div class="row myaccount">
-    <aside class="col-sm-4 col-md-3">
+    <aside class="col-sm-5 col-md-4 col-lg-3 col-xl-3">
         <?
             include __DIR__ . '/../components/sidenav.php';
         ?>
     </aside>
-    <div class="col-sm-8 col-md-9">
+    <div class="col-sm-7 col-md-8 col-xl-9">
   <main>
 
 

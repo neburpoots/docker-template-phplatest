@@ -4,6 +4,8 @@ if(!isset($_SESSION))
     session_start();     
 }
 
+date_default_timezone_set('Europe/Amsterdam');
+
 class PatternRouter {
 
     private function stripParameters($uri) {
@@ -39,17 +41,12 @@ class PatternRouter {
             header('Location: /');
         }
 
-        //Clears the shoppingcart session
-        if($explodedUri[0] == "clearshoppingcart") {
-            unset($_SESSION["shoppingcart"]);
-            header('Location: /');
-        }
-
         if($explodedUri[0] == "thanksforordering") {
             $shoppingCartController = new ShoppingCartController();
             $shoppingCartController->thanksForOrdering();
             die();
         }
+
 
         if($explodedUri[0] == "order") {
             if(isset($_SESSION["user"])) {
@@ -104,6 +101,21 @@ class PatternRouter {
                         $productController->edit();
                     }
                     die();
+                }
+                die();
+            } else {
+                header('Location: /login');
+                die();
+            }
+        }
+
+        if($explodedUri[0] == "allorders") {
+            if(isset($_SESSION["user"])) {
+                $user = unserialize($_SESSION["user"]);
+                $role = $user->getRole();
+                if ($role->getId() == 2 || $role->getName() == "Admin") {
+                    $orderController = new OrderController();
+                    $orderController->allOrders();
                 }
                 die();
             } else {

@@ -99,8 +99,22 @@ a {
 
 @media screen and (max-width: 600px) {
     .myaccount aside {
-        display: none;
+        height: 30vh;
+        padding: 0px;
     }
+
+    .myaccount {
+        margin: 0px;
+
+    }
+
+    .l-navbar {
+        height: 30vh;
+        padding-top: 20px;
+
+    }
+
+    
 }
 
 @media screen and (min-width: 768px) {

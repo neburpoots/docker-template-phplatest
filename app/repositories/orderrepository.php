@@ -143,4 +143,39 @@ class OrderRepository extends Repository {
             echo $e;
         }
     }
+
+    function getOrders() : array {
+        try {
+            $sql = "SELECT order_id, user_id, orderdate
+            FROM Orders";
+            $stmt = $this->connection->prepare($sql);
+            $user = unserialize($_SESSION['user']);
+
+            $stmt->execute();
+
+            $orders = array();
+
+
+
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $order = new Order();
+                $order->setOrder_id($row['order_id']);
+                $order->setUser_id($row['user_id']);
+
+                $date = new DateTime($row['orderdate']);
+                $order->setOrderDate($date);
+                $order = $this->getOrderLinesForOrder($order);
+                $orders[] = $order;
+                            
+            }
+
+            return $orders;
+
+        } catch (PDOException $e)
+        {
+            echo $e;
+        }
+    }
+
+    
 }

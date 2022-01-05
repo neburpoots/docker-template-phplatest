@@ -11,9 +11,9 @@
     </div>
   </div>
   <canvas id="canvas3d"></canvas>
-    <script async type="module">
-        import { Application } from './runtime.js';
+    <script defer type="module">
+        import { Application } from './scripts/homepageanimation/runtime.js';
         const app = new Application();
-        app.load('./scene.json');
+        app.load('./scripts/homepageanimation/scene.json');
     </script>
 </main>

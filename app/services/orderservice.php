@@ -21,4 +21,8 @@ class OrderService {
     public function getOrdersForPerson() : array {
       return $this->repository->getOrdersForPerson();
     }
+
+    public function getOrders() : array {
+      return $this->repository->getOrders();
+    }
 }
