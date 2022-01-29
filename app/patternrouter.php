@@ -9,7 +9,7 @@ date_default_timezone_set('Europe/Amsterdam');
 class PatternRouter {
 
     private function stripParameters($uri) {
-        if(str_contains($uri, '?')) {
+        if(strpos($uri, '?')) {
             $uri = substr($uri, 0, strpos($uri, '?'));
         }
         return $uri;
@@ -33,7 +33,7 @@ class PatternRouter {
         }
         
         //AUTOLOAD AFTER API
-        require 'autoload.php';
+        require_once 'autoload.php';
 
         //Clears the user session
         if($explodedUri[0] == "logout") {

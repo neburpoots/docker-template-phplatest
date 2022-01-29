@@ -58,7 +58,7 @@ function deleteProduct(id) {
         console.log("Request complete! response:", res);
         });
         alert("Product is succesvol verwijdert!");
-        window.location.replace("/allproducts");
+        renderProducts();
         return true;
     }
 }

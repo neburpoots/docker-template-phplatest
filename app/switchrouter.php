@@ -16,7 +16,6 @@ class SwitchRouter {
             case 'home/about': 
                     require __DIR__ . '/controllers/homecontroller.php';
                     $controller = new HomeController();
-                    $controller->about();
                     break;
 
             default: 

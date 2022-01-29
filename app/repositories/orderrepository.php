@@ -1,6 +1,10 @@
 <?php
 
-require __DIR__ . '/../autoload.php';
+require_once __DIR__ . '/../models/Order_Line.php';
+require_once __DIR__ . '/../models/Order.php';
+require_once __DIR__ . '/../models/Product.php';
+require_once __DIR__ . '/../models/Role.php';
+
 
 class OrderRepository extends Repository {
     

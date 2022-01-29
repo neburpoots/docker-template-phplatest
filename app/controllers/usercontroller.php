@@ -11,7 +11,7 @@ class UserController {
     {
 		$patternRouter = new PatternRouter();
 		$this->validation = new RegisterValidation();
-		$this->userService = new userService();
+		$this->userService = new UserService();
 		$this->user = new User();
     }
 

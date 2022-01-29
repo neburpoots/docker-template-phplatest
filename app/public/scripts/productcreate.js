@@ -1,4 +1,5 @@
-const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+const format = /[@#$%^&*()_+\=\[\]{};':"\\|<>\/]+/;
+const formatdescription = /[@#$%^&*()_+\=\[\]{};':"\\|<>\/]+/;
 const nameerr = "";
 var error = "";
 var image = "";
@@ -71,7 +72,7 @@ function validatedescription(description){
     } else if(description.length < 2) {
         error = "Bescrijving is te kort \n";
         return false;  
-    } else if(format.test(description)) {
+    } else if(formatdescription.test(description)) {
         error = "Er staan characters in de beschrijving die niet toegestaan zijn \n";
         return false;  
     } else {

@@ -109,6 +109,7 @@ class ShoppingCartController {
     }
 
     public function thanksForOrdering() {
+        echo "test";
         require __DIR__ . '/../views/thanksforordering.php';
     }
 }

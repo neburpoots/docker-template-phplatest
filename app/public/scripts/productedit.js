@@ -1,4 +1,4 @@
-const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+const format = /[@#$%^&*()_+\=\[\]{};':"\\|<>\/]+/;
 const nameerr = "";
 var error = "";
 var image = "";
